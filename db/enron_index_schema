@@ -1,0 +1,35 @@
+{
+    schema,
+    [
+        {version, "1.1"},
+        {default_field, "body"},
+        {default_op, "or"},
+        {n_val, 3}
+    ],
+    [
+        {field, [
+            {name, "id"},
+            {type, string}
+        ]},
+        {field, [
+            {name, "mail_date"},
+            {type, date}
+        ]},
+        {field, [
+            {name, "subject"},
+            {type, string},
+            {analyzer_factory, "com.basho.search.analysis.DefaultAnalyzerFactory"}
+        ]},
+        {field, [
+            {name, "body"},
+            {type, string},
+            {analyzer_factory, "com.basho.search.analysis.DefaultAnalyzerFactory"}
+        ]},
+        {dynamic_field, [
+            {name, "*"},
+            {type, string},
+            {analyzer_factory, "com.basho.search.analysis.DefaultAnalyzerFactory"}
+        ]}
+    ]
+}.
+

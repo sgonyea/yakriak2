@@ -1,0 +1,10 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
+*.pid
+*.tmproj
+riak_search-0.13.0
+db/pen
+riak_search
+
