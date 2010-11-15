@@ -7,8 +7,8 @@ gem 'coffee-script',  '~>2.0.0'
 gem 'barista',        '~>0.5.1'
 gem 'haml',           '~>3.0.23'
 gem 'rsolr',          '~>0.12.1'
-#gem 'rsolr_ext',      '~>0.12.1'
 gem 'mail',           '~>2.2.9'
+gem 'jquery-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

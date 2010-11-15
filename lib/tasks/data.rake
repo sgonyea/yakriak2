@@ -6,8 +6,8 @@ namespace :data do
     require 'riak/search'
     solr      = RSolr.connect :url => "http://localhost:8098/solr/enron"
     riak      = Riak::Client.new :solr => "/solr"
+    not_b4    = Time.parse("1999-01-01")
     enron     = riak["enron"]
-    docs      = []
     mail_root = File.expand_path('tmp/.maildir', Rails.root)
     grrr      = Proc.new{|_var|
                   case _var
@@ -25,6 +25,8 @@ namespace :data do
 
       begin
         msg       = Mail.read(path)
+        next if msg.date < not_b4
+
         doc       = Riak::RObject.new(enron, msg.message_id.to_s)
         doc.data  = {
           :id           => msg.message_id,

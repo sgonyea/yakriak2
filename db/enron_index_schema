@@ -4,7 +4,7 @@
         {version, "1.1"},
         {default_field, "body"},
         {default_op, "or"},
-        {n_val, 3}
+        {n_val, 2}
     ],
     [
         {field, [
@@ -17,18 +17,39 @@
         ]},
         {field, [
             {name, "subject"},
-            {type, string},
-            {analyzer_factory, "com.basho.search.analysis.DefaultAnalyzerFactory"}
+            {type, string}
         ]},
         {field, [
-            {name, "body"},
-            {type, string},
-            {analyzer_factory, "com.basho.search.analysis.DefaultAnalyzerFactory"}
+            {name, "from"},
+            {type, string}
         ]},
-        {dynamic_field, [
-            {name, "*"},
-            {type, string},
-            {analyzer_factory, "com.basho.search.analysis.DefaultAnalyzerFactory"}
+        {field, [
+            {name, "to"},
+            {type, string}
+        ]},
+        {field, [
+            {name, "cc"},
+            {type, string}
+        ]},
+        {field, [
+            {name, "bcc"},
+            {type, string}
+        ]},
+        {field, [
+            {name, "folder"},
+            {type, string}
+        ]},
+        {field, [
+            {name, "origin"},
+            {type, string}
+        ]},
+        {field, [
+            {name, "nsf"},
+            {type, string}
+        ]},
+        {field, [
+            {name, "mail_content_type"},
+            {type, string}
         ]}
     ]
 }.
