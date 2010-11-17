@@ -5,9 +5,10 @@ gem 'curb',           '~>0.7.8'
 gem 'ripple',         '~>0.8.2'
 gem 'coffee-script',  '~>2.0.0'
 gem 'barista',        '~>0.5.1'
-gem 'haml',           '~>3.0.23'
 gem 'rsolr',          '~>0.12.1'
 gem 'mail',           '~>2.2.9'
+gem 'haml',           '~>3.0.23'
+gem 'compass',        '~>0.10'
 gem 'jquery-rails'
 
 # Bundle edge Rails instead:

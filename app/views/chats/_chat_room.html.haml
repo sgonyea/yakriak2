@@ -1,0 +1,7 @@
+%ol#chatlog
+=form_tag(chats_path, :id => :chatbox, :method => :post, :remote => true) do
+  %fieldset
+    %ol
+      %li
+        =label_tag      :message, "Message"
+        =text_field_tag :message

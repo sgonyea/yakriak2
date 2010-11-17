@@ -1,4 +1,12 @@
 LAPreso::Application.routes.draw do
+
+  resources :chats
+
+  root :to => "chats#index"
+
+  match 'login'   =>  'chats#login',    :as =>  :login
+  match 'welcome' =>  'chats#welcome',  :as =>  :welcome
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

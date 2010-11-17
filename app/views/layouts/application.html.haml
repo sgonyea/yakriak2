@@ -1,9 +1,12 @@
 %html
   %head
+    =stylesheet_link_tag    :all
+    =javascript_include_tag :defaults
+    =javascript_include_tag "jquery_cookie"
+    =javascript_include_tag "json2"
+    =csrf_meta_tag
     %title
-      = render :partial => "title"
-      = stylesheet_link_tag :all
-      = javascript_include_tag :defaults
-      = csrf_meta_tag
-    %body
-      = yield
+      YakRiak- on Rails!
+  %body
+    = render :partial => "chat_head"
+    = yield

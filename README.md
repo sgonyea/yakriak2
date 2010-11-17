@@ -1,12 +1,6 @@
 # Welcome to My Riak MapReduce Demo Rails App!
 
-## Source Data
-
-Map Reduce will be used for data analysis, with the [Enron Email Dataset][enron_data] as the focus.
-
 ## How to Get Started
-
-Make sure you have several GB of hard-disk space available.
 
 * Clone this repo and install dependencies:
 
@@ -14,17 +8,6 @@ Make sure you have several GB of hard-disk space available.
         cd lapreso
         export LAPRESO=`pwd`
         bundle install
-
-* Fetch the Enron Email Dataset
-
-        # Make the file hidden - TextMate's Project Pane *will* choke on this file, if not done so
-        mkdir tmp/.enron && cd tmp/.tmp_enron
-        curl -O http://www.cs.cmu.edu/~enron/enron_mail_082109.tar.gz
-
-        # And wait
-        tar zxf enron_mail_082109.tar.gz
-
-        mv maildir ../.maildir && cd .. && rm .tmp_enron
 
 * [Install Riak Search][install_rs]. I suggest building a development release.
 
@@ -69,22 +52,8 @@ Make sure you have several GB of hard-disk space available.
         # Port 8098 is the default web port; we'll have the load balancer sit here and route it to our dev nodes
         db/pen/pen -x 500 -p tmp/pen-8098.pid localhost:8098 8098 localhost:8091 localhost:8092 localhost:8093
 
-* Feed Data
-
-I recycled some of the script used by [Tim Dysinger][dysinger].
-
-        rake data:load
-
 # Thanks To
 
-## Source Data
-Thanks to [Infochimps][infochimps] for pointing me at the data, and [dysinger][dysinger] for redirecting me to mail-trends. [Carnegie Melon][enron_data] and the [mail-trends][mailtrends] project.
-
-
-[infochimps]:   http://infochimps.com/datasets/enron-email-dataset--2
-[enron_data]:   http://www.cs.cmu.edu/~enron/
-[dysinger]:     http://dysinger.net/
-[mailtrends]:   http://code.google.com/p/mail-trends/source/browse/#svn/trunk
 [install_rs]:   https://wiki.basho.com/display/RIAK/Riak+Search+-+Installation+and+Setup
 [pen]:          http://siag.nu/pen/
 

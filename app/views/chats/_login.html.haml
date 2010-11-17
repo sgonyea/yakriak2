@@ -1,0 +1,12 @@
+=form_tag(login_url, :id => :login, :method => :post, :remote => true) do
+  %fieldset
+    %legend Sign in
+    %ol
+      %li
+        =label_tag      :name, "Name"
+        =text_field_tag :name
+      %li
+        =label_tag      :email, "Email (for gravatars)"
+        =text_field_tag :email
+      %li
+        =submit_tag     "Start Yakking!"
